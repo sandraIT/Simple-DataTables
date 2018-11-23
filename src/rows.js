@@ -125,5 +125,6 @@ export class Rows {
         data[firstIndex] = data[secondIndex];
         data[secondIndex] = temp;
         this.update();
+        this.dt.columns().rebuild();
     }
 }
