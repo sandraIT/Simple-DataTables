@@ -14,10 +14,6 @@
     "compile_test_js": "rollup tests/index.js --config --output.file tests/index-dist.js",
     "prepare": "npm run compile"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fiduswriter/Simple-DataTables.git"
-  },
   "keywords": [
     "DataTable",
     "DataTables",
