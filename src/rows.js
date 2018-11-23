@@ -122,7 +122,7 @@ export class Rows {
     swap(firstIndex, secondIndex) {
         const data = this.dt.data;
         const temp = data[firstIndex];
-        data[firstIndex] = data[firstIndex];
+        data[firstIndex] = data[secondIndex];
         data[secondIndex] = temp;
         this.update();
     }
