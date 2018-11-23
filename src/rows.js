@@ -114,4 +114,16 @@ export class Rows {
             row.dataIndex = i
         })
     }
+
+    /**
+     * Swap rows
+     * @return {Void}
+     */
+    swap(firstIndex, secondIndex) {
+        const data = this.dt.data;
+        const temp = data[firstIndex];
+        data[firstIndex] = data[firstIndex];
+        data[secondIndex] = temp;
+        this.update();
+    }
 }
