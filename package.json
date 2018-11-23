@@ -11,8 +11,7 @@
     "compile_js": "rollup src/index.js --config --output.file dist/index.js",
     "compile_css": "cat src/style.css > dist/style.css",
     "compile_test": "npm run compile_test_js && cat node_modules/qunit/qunit/qunit.css > tests/qunit.css",
-    "compile_test_js": "rollup tests/index.js --config --output.file tests/index-dist.js",
-    "prepare": "npm run compile"
+    "compile_test_js": "rollup tests/index.js --config --output.file tests/index-dist.js"
   },
   "keywords": [
     "DataTable",
