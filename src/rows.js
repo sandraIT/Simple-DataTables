@@ -117,6 +117,8 @@ export class Rows {
 
     /**
      * Swap rows
+     * @param  {Number} firstIndex
+     * @param  {Number} secondIndex
      * @return {Void}
      */
     swap(firstIndex, secondIndex) {
@@ -124,6 +126,22 @@ export class Rows {
         const temp = data[firstIndex];
         data[firstIndex] = data[secondIndex];
         data[secondIndex] = temp;
+        this.update();
+        this.dt.columns().rebuild();
+    }
+
+    /**
+     * Swap rows
+     * @param  {Array} swaps
+     * @return {Void}
+     */
+    swapMultiple(swaps) {
+        const data = this.dt.data;
+        swaps.forEach(swap => {
+            const temp = data[swap[0]];
+            data[swap[0]] = data[swap[1]];
+            data[swap[1]] = temp;
+        });
         this.update();
         this.dt.columns().rebuild();
     }
