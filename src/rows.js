@@ -136,6 +136,9 @@ export class Rows {
      * @return {Void}
      */
     swapMultiple(swaps) {
+        if (!swaps) {
+            return;
+        }
         const data = this.dt.data;
         swaps.forEach(swap => {
             const temp = data[swap[0]];
